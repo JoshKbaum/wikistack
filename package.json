@@ -1,11 +1,10 @@
 {
   "name": "wikistack",
-  "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./path/to/your/app.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lp1295/wikistack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lp1295/wikistack/issues"
+  },
+  "homepage": "https://github.com/lp1295/wikistack#readme",
+  "description": ""
 }
