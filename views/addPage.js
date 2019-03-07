@@ -1,14 +1,14 @@
 const html = require("html-template-tag");
 const layout = require("./layout");
 
-module.exports = () => layout(html`
+module.exports = () => layout(`
   <h3>Add a Page</h3>
   <hr>
   <form method="POST" action="/wiki/">
     
-    <div>PLACEHOLDER FOR AUTHOR NAME FIELD</div>
+    <div><label for="title" class="col-sm-2 control-label">Author Name</label> <input id="author" name="author" type="text"></div>
     
-    <div>PLACEHOLDER FOR AUTHOR EMAIL FIELD</div>
+    <div><label for="title" class="col-sm-2 control-label">Email</label> <input id="email" name="email" type="text"></div>
     
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">Page Title</label>
@@ -17,9 +17,9 @@ module.exports = () => layout(html`
       </div>
     </div>
 
-    <div>PLACEHOLDER FOR PAGE CONTENT TEXTAREA FIELD</div>
+    <div><label for="title" class="col-sm-2 control-label">Content</label> <input id="content" name="content" type="text"></div>
     
-    <div>PLACEHOLDER FOR PAGE STATUS INPUT FIELD</div>
+    <div><label for="title" class="col-sm-2 control-label">Page Status</label> <input id="status" name="status" type="text"></div>
 
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-primary">submit</button>
@@ -27,3 +27,6 @@ module.exports = () => layout(html`
   
   </form>
 `);
+
+// didnt change for in any of the input tags
+//status may need to be changed from a text field to ...

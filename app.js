@@ -7,12 +7,12 @@ const models = require('./models');
 const wiki = require('./routes/wiki');
 const user = require('./routes/user');
 
+app.use(express.urlencoded({ extended: false }));
+
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
-app.use('/wiki', wiki)
 app.use('/user', user)
-
-app.use(express.urlencoded({ extended: false }));
+app.use('/wiki', wiki)
 
 app.get('/', (req, res) => {
   console.log('hello world');
@@ -39,4 +39,3 @@ init()
 models.db.authenticate().then(() => {
     console.log('connected to the database');
   });
-  
